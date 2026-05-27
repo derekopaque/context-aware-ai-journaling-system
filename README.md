@@ -1,11 +1,15 @@
 # Context-Aware AI Journaling System
 
-A context-aware AI journaling system with a React Native Expo frontend and a Python FastAPI backend.
+This repository contains the implementation of the Final Year Project **“Context-Aware AI Journaling and Reflection”**.
+
+The system is a context-aware AI journaling prototype designed to support personal reflection while preserving users’ sense of control, ownership, and authorship. It uses a three-layer workflow: events are first captured from contextual data, then transformed into editable memory clips, and finally combined into a diary draft that users can review and revise.
+
+The project includes a React Native Expo frontend and a Python FastAPI backend.
 
 ## Project Structure
 
 ```text
-context-aware-ai-journaling-system/
+context-aware-ai-journaling/
 ├── rn-app/          # React Native app built with Expo
 ├── backend/         # Python FastAPI backend
 ├── README.md
@@ -20,12 +24,6 @@ npm install
 npm start
 ```
 
-The frontend API endpoint is configured in:
-
-```text
-rn-app/constants/Config.ts
-```
-
 ## Backend
 
 ```bash
@@ -36,13 +34,9 @@ pip install -r requirements.txt
 uvicorn api.index:app --reload
 ```
 
-Create a `.env` file or configure deployment environment variables based on:
+## Required Environment Variables
 
-```text
-backend/.env.example
-```
-
-Required environment variables:
+Create a `.env` file or configure deployment environment variables with the following keys:
 
 ```text
 DEEPSEEK_API_KEY=
@@ -50,8 +44,11 @@ QWEN_API_KEY=
 AMAP_KEY=
 ```
 
-## Deployment Notes
+## Notes
 
-- Do not commit real API keys.
-- Do not commit `node_modules`, `.venv`, Expo cache, native build folders, or IDE files.
-- For Vercel deployment, set the backend environment variables in the Vercel project settings.
+- API credentials are not included.
+
+
+## Thesis Context
+
+This project was developed as part of a Final Year Project in Human-Computer Interaction (HCI), focusing on AI-assisted journaling, reflection, and human-AI co-creation.
